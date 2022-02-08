@@ -2,6 +2,16 @@
     display: flex;
     overflow-x: scroll;
 }
+.resultFilter {
+    color: #333333;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-left: 4%;
+}
+strong {
+    color: #828282;
+}
 
 @media screen and (min-width:1024px) {
     .vitrine-produtos {
@@ -9,5 +19,8 @@
         flex-wrap: wrap;
         justify-content: center;
         overflow: hidden;
+    }
+    .resultFilter {
+        margin: 4%;
     }
 }

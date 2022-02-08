@@ -1,4 +1,5 @@
 footer {
+    height: 110px;
     width: 290px;
     background-color: #F5F5F5;
 }
@@ -9,16 +10,18 @@ hr {
 .footer-cart {
     margin-top: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .cart-total {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     color: #333333;
+    margin-right: 50%;
 }
 .cart-price {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
+    font-size: 15px;
     color: #828282;
 }
 .remove-everyone {

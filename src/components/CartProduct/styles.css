@@ -29,7 +29,7 @@
     color: #333333;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    max-width: 14ch;
+    max-width: 8ch;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

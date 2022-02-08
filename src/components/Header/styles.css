@@ -35,6 +35,7 @@ header figure {
     color: #fff;
     padding: 10px;
     height: 35px;
+    cursor: pointer;
 }
 .search:hover {
     background: #93D7AF;

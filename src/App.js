@@ -10,6 +10,7 @@ function App() {
   const [products, setProducts] = useState([])
   const [currentSale, setCurrentSale] = useState([])
   const [filteredProducts, setFilteredProducts] = useState([])
+  const [search, setSearch] = useState('')
 
 
   useEffect(() => {
@@ -19,27 +20,33 @@ function App() {
   },[])
   
 
-
-
   const handleClick  = (idProduct) => {
     const findProduct = products.find(({id}) => id === idProduct)
     const duplicateProduct = currentSale.some(({id}) => id === idProduct)
 
     duplicateProduct ? (
-      alert('vc ja tem esse produto no carrinho')
+      alert('Este produto ja está no carrinho!')
     ) : (
       setCurrentSale([...currentSale, findProduct])
     )
   }
-  console.log(currentSale)
+
+  const searchInput = () => {
+    const productsFilter = products.filter(({name,category}) => name.toLowerCase().includes(search.toLowerCase()) ||
+     category.toLowerCase().includes(search.toLowerCase()))
+
+    setFilteredProducts(productsFilter)
+  }
+  
   return (
     <>
-      <Header />
+      <Header search={search} setSearch={setSearch} searchInput={searchInput} products={products}/>
       <main className="main">
         <section className='section-vitrine'>
         <ProductList products={products} 
         handleClick={handleClick} 
-        filteredProducts={filteredProducts}/>
+        filteredProducts={filteredProducts}
+        search={search}/>
         </section>
       
         <aside className='aside-cart'>

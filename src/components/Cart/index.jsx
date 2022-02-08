@@ -13,18 +13,25 @@ const Cart = ({currentSale, setCurrentSale}) => {
 
     return (
         <>
-        <ul className='cart-list'>
+        
             {currentSale.length === 0 ? (
-                <img src={EmptyCart} alt="Carrinho vazio" />
+                <ul className='empty'>
+                    <li> 
+                        <img src={EmptyCart} alt="Carrinho vazio" />
+                    </li>
+                </ul>
             ) : (
                 <>
+                <ul className='cart-list'>
                     {currentSale.map((product, index) => 
                     <CartProduct removeItem={removeItem} product={product} key={index}/>                
                     )} 
+                </ul> 
                 </>   
             )}    
-        </ul>    
-            {currentSale.length !== 0 && <CartTotal currentSale={currentSale} /> }
+           
+            {currentSale.length !== 0 && <CartTotal currentSale={currentSale} 
+            setCurrentSale={setCurrentSale}/> }
         </>
     )
 }
