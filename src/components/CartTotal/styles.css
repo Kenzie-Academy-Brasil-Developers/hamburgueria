@@ -1,0 +1,48 @@
+footer {
+    width: 290px;
+    background-color: #F5F5F5;
+}
+hr {
+    border: 1px solid #E0E0E0;
+    width: 270px;
+}
+.footer-cart {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.cart-total {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #333333;
+}
+.cart-price {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #828282;
+}
+.remove-everyone {
+    background-color: #E0E0E0;
+    display: block;
+    margin: 0 auto;
+    width: 270px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #828282;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.remove-everyone:hover {
+    background-color: #828282;
+    color: #fff;
+}
+
+@media screen and (min-width:1024px) {
+    footer {
+        width: 100%;
+        border-radius: 0px 0px 5px 5px
+    }
+}

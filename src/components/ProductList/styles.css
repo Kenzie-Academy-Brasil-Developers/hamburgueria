@@ -1,0 +1,13 @@
+.vitrine-produtos {
+    display: flex;
+    overflow-x: scroll;
+}
+
+@media screen and (min-width:1024px) {
+    .vitrine-produtos {
+        max-width: 900px;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+    }
+}
