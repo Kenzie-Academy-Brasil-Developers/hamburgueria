@@ -4,6 +4,10 @@ import {useState, useEffect} from 'react'
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 import Header from './components/Header';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
 
@@ -40,6 +44,7 @@ function App() {
   
   return (
     <>
+      
       <Header search={search} setSearch={setSearch} searchInput={searchInput} products={products}/>
       <main className="main">
         <section className='section-vitrine'>
